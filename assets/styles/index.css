@@ -3,10 +3,14 @@
 html,
 body {
   font-family: "Poppins", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -27,22 +31,29 @@ main.main {
   width: 100vw;
   height: 100vh;
   background-color: #0f172b;
+  padding: 20px;
 }
 
 main.main .container {
   color: white;
   max-width: 948px;
+  width: 100%;
   text-align: center;
+  padding: 0 20px;
 }
 
 main.main .container .logo {
   margin-bottom: 60px;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main.main .container .description {
   color: white;
   font-size: 24px;
-  line-height: auto;
+  line-height: 1.4;
+  margin-bottom: 30px;
 }
 
 main.main .container a {
@@ -58,9 +69,49 @@ footer.footer {
   display: block;
   position: absolute;
   bottom: 30px;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
 }
 
 footer.footer p.text {
   color: white;
   font-size: 16px;
+}
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  main.main .container .description {
+    font-size: 20px;
+  }
+
+  footer.footer p.text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  main.main {
+    padding: 15px;
+  }
+
+  main.main .container .description {
+    font-size: 18px;
+  }
+
+  main.main .container .logo {
+    max-width: 180px;
+    margin-bottom: 40px;
+  }
+
+  footer.footer {
+    bottom: 15px;
+  }
+
+  footer.footer p.text {
+    font-size: 12px;
+  }
 }
